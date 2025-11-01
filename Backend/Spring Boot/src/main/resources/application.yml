@@ -1,0 +1,12 @@
+server:
+  port: 8080
+
+spring:
+  # Por ahora apago BD y JPA para que arranque sin configuración de MySQL
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+      - org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
+
+  jackson:
+    time-zone: UTC
